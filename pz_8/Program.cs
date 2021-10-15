@@ -6,9 +6,9 @@ namespace pz_8
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
+            A[i] = new Random(4);
             for (int i = 0; i <= 9; i++)//Вычесление и запсись элементов массмва
-                Console.WriteLine($"{rnd.Next(0,5)}");//Вывод элементов массива
+                Console.WriteLine($"{ = (0,5)}");//Вывод элементов массива
         }
     }
 }
