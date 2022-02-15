@@ -7,12 +7,5 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="pz_23.Patient">
-    <Position X="7.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AACAAAACAAAAAAAAAAAAAACAAAAEAAAEAAAQAAAACAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

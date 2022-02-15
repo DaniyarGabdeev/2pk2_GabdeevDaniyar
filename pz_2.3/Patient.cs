@@ -1,27 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace pz_23
+namespace pz_2._3
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Patient pat = new Patient(" ", "Габдеев", "Муратович");
-            Patient pat1 = new Patient(new DateTime(2000, 01, 01), new DateTime(2017, 02, 02));
-            Patient pat2 = new Patient("Никита", "Адамович", "Владимирович");
-            pat.GetPatientInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            pat1.GetPatientInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            pat2.GetPatientInfo();
-            Console.WriteLine(Patient.GetCounter());
-
-        }
-    }
-}
-class Patient
+    class Patient
     {
         string name;
         string fam;
@@ -84,6 +67,8 @@ class Patient
         { return counter; }
         public void GetPatientInfo()
         {
-            Console.WriteLine($"Имя: {name} Отчество: {otch} Фамилия: {fam} Дата рождения: {dataBirth} Дата поступления: {receiptDate} Диагноз: {diagnoc}");
+                Console.WriteLine($"Имя: {name} Отчество: {otch} Фамилия: {fam} Дата рождения: {dataBirth} Дата поступления: {receiptDate} Диагноз: {diagnoc}");
         }
     }
+
+}

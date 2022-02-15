@@ -1,27 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace pz_23
+namespace pz_2._3
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Patient pat = new Patient(" ", "Габдеев", "Муратович");
-            Patient pat1 = new Patient(new DateTime(2000, 01, 01), new DateTime(2017, 02, 02));
-            Patient pat2 = new Patient("Никита", "Адамович", "Владимирович");
-            pat.GetPatientInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            pat1.GetPatientInfo();
-            Console.WriteLine();
-            Console.WriteLine();
-            pat2.GetPatientInfo();
-            Console.WriteLine(Patient.GetCounter());
-
-        }
-    }
-}
-class Patient
+    class Patient
     {
         string name;
         string fam;
@@ -30,6 +13,7 @@ class Patient
         DateTime receiptDate;
         string diagnoc;
         static int counter;
+        static int counter1;
 
         public string Name
         {
@@ -46,6 +30,11 @@ class Patient
             get { return otch; }
             set { if (value == " ") otch = "ошибка"; else otch = value; }
         }
+        public string Diagnoc
+        {
+            get { return diagnoc; }
+            set { if (value == " ") diagnoc = "ошибка"; else diagnoc = value; }
+        }
         public DateTime DataBirth
         {
             get { return dataBirth; }
@@ -53,37 +42,44 @@ class Patient
         }
         public Patient(string name, string fam, string otch)
         {
-            this.name = name;
-            this.fam = fam;
-            this.otch = otch;
-            dataBirth = new DateTime(2003, 12, 12);
+            this.Name = name;
+            this.Fam = fam;
+            this.Otch = otch;
+            DataBirth = new DateTime(1939, 12, 12);
             receiptDate = new DateTime(2007, 02, 12);
-            diagnoc = "чума";
-            if (dataBirth < new DateTime(2003, 02, 15)) counter++;
+            Diagnoc = "чума";
+            if (receiptDate < new DateTime(2021, 12, 31)) counter++;
+            if (dataBirth < new DateTime(1958, 01, 01)) counter1++;
         }
         public Patient(DateTime dataBirth, DateTime receiptDate)
         {
-            this.dataBirth = dataBirth;
+            this.DataBirth = dataBirth;
             this.receiptDate = receiptDate;
             name = "Артем";
             fam = "Никитин";
             otch = "Валентинович";
-            diagnoc = "ангина";
-            if (dataBirth < new DateTime(2003, 02, 15)) counter++;
+            Diagnoc = " ";
+            if (receiptDate < new DateTime(2021, 12, 31)) counter++;
+            if (dataBirth < new DateTime(1958, 01, 01)) counter1++;
         }
         public Patient(string name, string fam, string otch, string diagnos)
         {
-            this.name = name;
-            this.fam = fam;
-            this.otch = otch;
-            dataBirth = new DateTime(2003, 12, 12);
+            this.name = Name;
+            this.fam = Fam;
+            this.otch = Otch;
+            DataBirth = new DateTime(2003, 12, 12);
             receiptDate = new DateTime(2007, 02, 12);
-            if (dataBirth < new DateTime(2003, 02, 15)) counter++;
+            if (receiptDate < new DateTime(2021, 12, 31)) counter++;
+            if (dataBirth < new DateTime(1958, 01, 01)) counter1++;
         }
         public static int GetCounter()
         { return counter; }
+        public static int GetCounter1()
+        { return counter1; }
         public void GetPatientInfo()
         {
             Console.WriteLine($"Имя: {name} Отчество: {otch} Фамилия: {fam} Дата рождения: {dataBirth} Дата поступления: {receiptDate} Диагноз: {diagnoc}");
         }
     }
+
+}
