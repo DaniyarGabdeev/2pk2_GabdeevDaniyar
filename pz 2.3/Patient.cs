@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace pz_2._3
 {
@@ -11,7 +13,7 @@ namespace pz_2._3
         string otch;
         DateTime dataBirth;
         DateTime receiptDate;
-        string diagnoc;
+        public string diagnoc;
         static int counter;
         static int counter1;
 
@@ -47,7 +49,7 @@ namespace pz_2._3
             this.Otch = otch;
             DataBirth = new DateTime(1939, 12, 12);
             receiptDate = new DateTime(2007, 02, 12);
-            Diagnoc = "чума";
+            diagnoc = "чума";
             if (receiptDate < new DateTime(2021, 12, 31)) counter++;
             if (dataBirth < new DateTime(1958, 01, 01)) counter1++;
         }
@@ -55,18 +57,18 @@ namespace pz_2._3
         {
             this.DataBirth = dataBirth;
             this.receiptDate = receiptDate;
-            name = "Артем";
-            fam = "Никитин";
-            otch = "Валентинович";
-            Diagnoc = " ";
+            Name = "Артем";
+            Fam = "Никитин";
+            Otch = "Валентинович";
+            diagnoc = " ";
             if (receiptDate < new DateTime(2021, 12, 31)) counter++;
             if (dataBirth < new DateTime(1958, 01, 01)) counter1++;
         }
         public Patient(string name, string fam, string otch, string diagnos)
         {
-            this.name = Name;
-            this.fam = Fam;
-            this.otch = Otch;
+            this.Name = Name;
+            this.Fam = Fam;
+            this.Otch = Otch;
             DataBirth = new DateTime(2003, 12, 12);
             receiptDate = new DateTime(2007, 02, 12);
             if (receiptDate < new DateTime(2021, 12, 31)) counter++;
@@ -76,9 +78,9 @@ namespace pz_2._3
         { return counter; }
         public static int GetCounter1()
         { return counter1; }
-        public void GetPatientInfo()
+        public virtual void GetPatientInfo()
         {
-            Console.WriteLine($"Имя: {name} Отчество: {otch} Фамилия: {fam} Дата рождения: {dataBirth} Дата поступления: {receiptDate} Диагноз: {diagnoc}");
+            Console.WriteLine($"Имя: {name}\nОтчество: {otch}\nФамилия: {fam}\nДата рождения: {dataBirth}\nДата поступления: {receiptDate}\nДиагноз: {diagnoc}");
         }
     }
 

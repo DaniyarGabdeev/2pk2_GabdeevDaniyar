@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz_14", "pz_14\pz_14.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PZ_Последние", "PZ_Последние\PZ_Последние.csproj", "{F1B51F32-3E53-42AB-AD25-8570CB8145E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pz 2.3", "pz 2.3\pz 2.3.csproj", "{DCCD3569-8B70-415C-AFE8-53D8D7E5A875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pz 2.3", "pz 2.3\pz 2.3.csproj", "{DCCD3569-8B70-415C-AFE8-53D8D7E5A875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

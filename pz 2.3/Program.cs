@@ -16,8 +16,10 @@ namespace pz_2._3
             Console.WriteLine();
             Console.WriteLine();
             pat2.GetPatientInfo();
-            Console.WriteLine($"Количество пациентов поступившых вчера {(Patient.GetCounter())}");
-            Console.WriteLine($"Количество несовершенолетних пациентов {(Patient.GetCounter1())}");
+            Console.WriteLine($"Количество пациентов поступившых вчера: {(Patient.GetCounter())}");
+            Console.WriteLine($"Количество несовершенолетних пациентов: {(Patient.GetCounter1())}");
+            RecoveredPatient pat3 = new RecoveredPatient("Никита", "Адамович", "Владимирович", new DateTime(2017, 02, 02), "Не выжил");
+            pat3.GetPatientInfo();
         }
     }
 }
