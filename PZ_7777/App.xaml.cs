@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PZ_77
+namespace PZ_7777
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
