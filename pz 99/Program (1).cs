@@ -27,12 +27,12 @@ namespace ConsoleApp3
         public void startInputRating()
         {
             List<int> listRating = new List<int>();
-            Console.WriteLine("Для остановки ввода введите все");
+            Console.WriteLine("Для остановки ввода введите конец");
             Console.Write("Введите имя предмета: ");
             string nameSubject = Console.ReadLine();
             string input;
             Console.Write("Оценка: ");
-            while ((input = Console.ReadLine()) != "все")
+            while ((input = Console.ReadLine()) != "конец")
             {
                 listRating.Add(int.Parse(input));
                 Console.Write("Оценка: ");
