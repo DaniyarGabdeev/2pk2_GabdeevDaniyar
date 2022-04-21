@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace ConsoleApp3
+namespace PZ_9_2
 {
     class Program
     {
@@ -13,9 +13,9 @@ namespace ConsoleApp3
             stu.Notifain += teacher.reportOnProgress;
             stu.startInputRating();
         }
-        
+
     }
-    delegate void MessageAboutAcademicAchievement(string nameStdent,string educationalSubject, float mean);
+    delegate void MessageAboutAcademicAchievement(string nameStdent, string educationalSubject, float mean);
     class Student
     {
         public event MessageAboutAcademicAchievement Notifain;
@@ -27,18 +27,18 @@ namespace ConsoleApp3
         public void startInputRating()
         {
             List<int> listRating = new List<int>();
-            Console.WriteLine("Для остановки ввода введите конец");
+            Console.WriteLine("Для остановки ввода введите ex");
             Console.Write("Введите имя предмета: ");
             string nameSubject = Console.ReadLine();
             string input;
             Console.Write("Оценка: ");
-            while ((input = Console.ReadLine()) != "конец")
+            while ((input = Console.ReadLine()) != "ex")
             {
                 listRating.Add(int.Parse(input));
                 Console.Write("Оценка: ");
             }
             float sum = 0;
-            foreach(int i in listRating)
+            foreach (int i in listRating)
             {
                 sum += i;
             }
@@ -55,10 +55,11 @@ namespace ConsoleApp3
         }
         public void reportOnProgress(string nameStdent, string educationalSubject, float mean)
         {
-            if(mean<=2.4)
+            if (mean <= 2.4)
             {
                 Console.WriteLine($"{name}: у {nameStdent} по {educationalSubject} плохая успеваемость");
             }
         }
     }
 }
+
