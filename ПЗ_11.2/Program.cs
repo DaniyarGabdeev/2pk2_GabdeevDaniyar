@@ -13,7 +13,6 @@ namespace ПЗ_11._2
             c = (char**)&p;
             *(*c) = '*';
             c[0][1] = '+';
-            for (int k = 0; k < 2; k++)
             Console.WriteLine($"значение *: {*(*c)}");
             Console.WriteLine($"значение +: { c[0][1]}");
         }
